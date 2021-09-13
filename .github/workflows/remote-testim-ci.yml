@@ -7,7 +7,7 @@ on:
 jobs:
   init-core-checks:
     name: Init Core Checks
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
     steps:
@@ -39,7 +39,7 @@ jobs:
 
   build:
     name: Build
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
     steps:
@@ -87,7 +87,7 @@ jobs:
   phpunit:
     name: PHPUnit
     needs: [ build ]
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
     steps:
