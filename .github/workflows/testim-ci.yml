@@ -4,6 +4,7 @@ on: [pull_request_target]
 
 jobs:
   run:
+    #if: github.repository_owner == 'elementor' # WILL NEED TO BE ADJUSTED
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -15,8 +16,8 @@ jobs:
           whitelist-file: '.github/workflows/whitelist.txt'
       - name: Elementor Tests / Init
         env:
-          TOKEN: ${{ secrets.TOK }} # GitHub access token to access the remote repo.
-          REMOTE_TESTS_REPO: ${{ secrets.REM_REP }} # Remote tests repo, e.g. `owner/repo-name`.
+          TOKEN: ${{ secrets.TOKEN }} # GitHub access token to access the remote repo. # WILL NEED TO BE ADJUSTED
+          REMOTE_TESTS_REPO: ${{ secrets.REMOTE_REPO }} # Remote tests repo, e.g. `owner/repo-name`. # WILL NEED TO BE ADJUSTED
           HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }} # The HEAD repo that initiated the push/PR.
         uses: peter-evans/repository-dispatch@d57191493a947e8da4f7bf3fbc389e5b20f21cdf
         with:
