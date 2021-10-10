@@ -9,6 +9,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
+      - uses: mstachniuk/ci-skip@v1
       - uses: actions/checkout@master
       - name: Block non-permitted users
         uses: StyleShit/action-whitelist-users@b8abcef5472afd0c7bcfaadf08c70a082437e459
