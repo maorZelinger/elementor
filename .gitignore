@@ -25,3 +25,6 @@ yarn.lock
 Thumbs.db
 *.DS_Store
 coverage/
+
+#playwright video output
+test-results/

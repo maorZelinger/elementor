@@ -11,7 +11,7 @@
         "test:php_multisite": "docker-compose run -e WP_MULTISITE=1 --rm wordpress_phpunit phpunit",
         "test:qunit": "grunt qunit",
         "dev:install": "npm install && composer install",
-        "test": "npm run playwright test -- --config=tests/playwright/config/default.config.js"
+        "test": "playwright test \"--config=tests/playwright/config/sanity.config.js\""
     },
     "devDependencies": {
         "@babel/core": "7.0.0",
