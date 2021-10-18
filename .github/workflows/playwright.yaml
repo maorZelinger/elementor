@@ -44,8 +44,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - phpVersion: '8.0'
-            wpCoreVersion: 'master'
           - phpVersion: '7.4'
             wpCoreVersion: 'latest'
     steps:
@@ -78,6 +76,11 @@ jobs:
         run: |
           npx wp-env run tests-cli "wp core version"
           npx wp-env run tests-cli "wp --info"
+      - name: Install playwright/test
+        run: |
+          npx playwright install-deps
+          npx playwright install-deps chromium
+          npm install -D @playwright/test
       - name: Run Playwright tests
         run: |
-          npx playwright test "--config=tests/playwright/config/sanity.config.js"
+          npx playwright test -- "--config=tests/playwright/config/sanity.config.js"
