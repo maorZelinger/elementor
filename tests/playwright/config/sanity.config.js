@@ -10,7 +10,6 @@ const config = {
   globalSetup: require.resolve('./global-setup'),
   retries:1,
   use: {
-    headless: false,
     storageState: 'storageState.json',
     baseURL:'https://testimmain-9pxic.stg.elementor.cool/',
     viewport: { width: 1440, height: 960 },
