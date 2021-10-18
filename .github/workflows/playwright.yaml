@@ -79,6 +79,7 @@ jobs:
       - name: Install playwright/test
         run: |
           npx playwright install-deps
+          npm install -D @playwright/test
       - name: Run Playwright tests
         run: |
           npx playwright test "--config=tests/playwright/config/sanity.config.js"
