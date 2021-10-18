@@ -14,7 +14,7 @@ const config = {
     storageState: 'storageState.json',
     baseURL:'https://testimmain-9pxic.stg.elementor.cool/',
     viewport: { width: 1440, height: 960 },
-    video: 'on-first-retry',
+    video: 'on',
   },
 };
 
