@@ -78,6 +78,9 @@ jobs:
         run: |
           npx wp-env run tests-cli "wp core version"
           npx wp-env run tests-cli "wp --info"
+      - name: Install playwright/test
+        run: |
+          npm install -D @playwright/test
       - name: Run Playwright tests
         run: |
           npx playwright test "--config=tests/playwright/config/sanity.config.js"
