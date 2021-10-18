@@ -80,4 +80,4 @@ jobs:
           npx wp-env run tests-cli "wp --info"
       - name: Run Playwright tests
         run: |
-          npx playwright test -- --config=tests/config/sanity.config.js"
+          npx playwright test "--config=tests/playwright/config/sanity.config.js"
